@@ -1,33 +1,30 @@
 import {OnSeederInit, Seeder} from 'nestjs-sequelize-seeder/dist';
 import {Song} from '../models/Song';
 
-@Seeder({
-    model: Song,
-    unique: [],
-})
+@Seeder({ model: Song })
 export class SeedSong implements OnSeederInit {
-    run() {
+    run() : Song[]{
         return [
             {
-                timesPlayed: 4547,
-                name: 'Cats & Dogs',
+                timesPlayed: 123,
+                name: 'Song 1',
                 length: 96,
                 albumId: 1,
-                genre: 'Hardcore Punk',
+                genre: 'Country',
             },
             {
-                timesPlayed: 3474,
-                name: 'Start Today',
+                timesPlayed: 434,
+                name: 'Song 2',
                 length: 124,
                 albumId: 1,
-                genre: 'Hardcore Punk',
+                genre: 'Rock',
             },
             {
-                timesPlayed: 666,
-                name: 'A New Power\'s Rising',
+                timesPlayed: 10,
+                name: 'Song 3',
                 length: 248,
                 albumId: 3,
-                genre: 'Epic',
+                genre: 'Hip hop',
             },
         ] as Song[];
     }
